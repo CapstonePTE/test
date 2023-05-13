@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
+    public SpriteRenderer SpriteRenderer;
     public float speed = 5.0f; // 캐릭터 이동 속도
     public float jumpForce = 7.0f; // 캐릭터의 점프 힘
     private int jumpCount;
@@ -23,6 +24,7 @@ public class CharacterController : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update() // isBrave 만들어서 1단점프 2단점프 구분하기
@@ -70,6 +72,8 @@ public class CharacterController : MonoBehaviour
                 animator.SetBool("isJump", false);
             }
         }
+
+        
     }
 
     private void FixedUpdate()
@@ -86,36 +90,29 @@ public class CharacterController : MonoBehaviour
         if (h == 0) // 방향키를 떼면
         {
             rigid.velocity = new Vector2(0, rigid.velocity.y); // 가해진 수평 방향 힘 제거
+            animator.SetBool("isMove", false);
         }
         else // 방향키를 누르고 있는 동안
         {
+            animator.SetBool("isMove", true);
             rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
             if (rigid.velocity.x > maxSpeed)//오른쪽
             {
-                rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);//y값을 0으로 잡으면 공중에서 멈춰버림
+                rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
             }
             else if (rigid.velocity.x < maxSpeed * (-1))//왼쪽
             {
                 rigid.velocity = new Vector2(maxSpeed * (-1), rigid.velocity.y);
             }
-        }
 
-        rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
-        if (rigid.velocity.x > maxSpeed)//오른쪽
-        {
-            rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);//y값을 0으로 잡으면 공중에서 멈춰버림
-            animator.SetBool("isMove", true);
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
-        else if (rigid.velocity.x < maxSpeed * (-1))//왼쪽
-        {
-            rigid.velocity = new Vector2(maxSpeed * (-1), rigid.velocity.y);
-            animator.SetBool("isMove", true);
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else
-        {
-            animator.SetBool("isMove", false);
+            if (rigid.velocity.x > 0.1) //방향전환
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
+            else if (rigid.velocity.x < 0.1 * (-1))
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
         }
     }
 

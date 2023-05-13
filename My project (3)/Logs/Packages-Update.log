@@ -39,3 +39,17 @@ The following packages were 추가됨:
   com.unity.modules.xr@1.0.0
 The following packages were 업데이트됨:
   com.unity.collab-proxy 1.17.6 버전에서 2.0.3버전으로  com.unity.ide.rider 3.0.16 버전에서 3.0.20버전으로  com.unity.ide.visualstudio 2.0.16 버전에서 2.0.18버전으로  com.unity.visualscripting 1.7.8 버전에서 1.8.0버전으로
+=== Sat May 13 15:53:05 2023
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were 업데이트됨:
+  com.unity.collab-proxy 1.2.16 버전에서 2.0.3버전으로  com.unity.ide.rider 1.1.4 버전에서 3.0.20버전으로  com.unity.ide.vscode 1.2.3 버전에서 1.2.5버전으로  com.unity.test-framework 1.1.20 버전에서 1.1.31버전으로  com.unity.textmeshpro 2.1.1 버전에서 3.0.6버전으로  com.unity.timeline 1.2.17 버전에서 1.6.4버전으로
+=== Sat May 13 15:53:06 2023
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were 추가됨:
+  com.unity.2d.sprite@1.0.0
