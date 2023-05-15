@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterController : MonoBehaviour
@@ -10,9 +8,11 @@ public class CharacterController : MonoBehaviour
     private int jumpCount;
     public float maxSpeed;
     public float maxJump; //점프 최대 가속도 설정
+    public float maxUp;
     Rigidbody2D rigid;
     private Rigidbody2D rb;
     private bool isGrounded; // 캐릭터가 땅에 있는지 여부
+    public static bool isRope = false; //로프에 닿아있는지 확인
     public static bool isBrave = false; //용기의 보석을 먹었는지 체크
     Animator animator; //애니메이터 조작을 위한 변수
 
@@ -66,14 +66,54 @@ public class CharacterController : MonoBehaviour
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 isGrounded = false;
                 animator.SetBool("isJump", true);
+                Debug.Log("jump");
             }
-            else if (isGrounded == true) 
+            else if (isGrounded == true)
             {
                 animator.SetBool("isJump", false);
             }
         }
 
-        
+        float v = Input.GetAxisRaw("Vertical");
+
+        if (isRope == true && Input.GetKey(KeyCode.UpArrow)) // 로프에 닿아았을때
+        {
+            rb.gravityScale = 0; // 중력 제거
+
+            rb.AddForce(Vector2.up * v, ForceMode2D.Impulse);
+            if (rigid.velocity.y > maxUp)
+            {
+                rigid.velocity = new Vector2(rigid.velocity.x, maxUp);
+                Debug.Log("up");
+            }
+        }
+
+        else if (Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            rigid.velocity = new Vector2(rigid.velocity.x, 0);
+            Debug.Log("off");
+        }
+
+        if (isRope == true && Input.GetKey(KeyCode.DownArrow))
+        {
+            rb.gravityScale = 0; // 중력 제거
+
+            rb.AddForce(Vector2.up * v, ForceMode2D.Impulse);
+            if (rigid.velocity.y < maxUp * (-1))
+            {
+                rigid.velocity = new Vector2(rigid.velocity.x, maxUp * (-1));
+                Debug.Log("down");
+            }
+        }
+
+        else if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            rigid.velocity = new Vector2(rigid.velocity.x, 0);
+            Debug.Log("off");
+        }
+
+        else if (isRope == false)
+            rb.gravityScale = 1; //중력 복구
     }
 
     private void FixedUpdate()
@@ -86,6 +126,7 @@ public class CharacterController : MonoBehaviour
         rb.AddForce(movement * speed); // Rigidbody2D에 힘을 가해 캐릭터 이동시키기
 
         float h = Input.GetAxisRaw("Horizontal");
+        
 
         if (h == 0) // 방향키를 떼면
         {
@@ -95,14 +136,16 @@ public class CharacterController : MonoBehaviour
         else // 방향키를 누르고 있는 동안
         {
             animator.SetBool("isMove", true);
-            rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.right * h, ForceMode2D.Impulse);
             if (rigid.velocity.x > maxSpeed)//오른쪽
             {
                 rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
+                Debug.Log("Right");
             }
             else if (rigid.velocity.x < maxSpeed * (-1))//왼쪽
             {
                 rigid.velocity = new Vector2(maxSpeed * (-1), rigid.velocity.y);
+                Debug.Log("Left");
             }
 
             if (rigid.velocity.x > 0.1) //방향전환
@@ -114,6 +157,8 @@ public class CharacterController : MonoBehaviour
                 GetComponent<SpriteRenderer>().flipX = true;
             }
         }
+
+        
     }
 
 

@@ -370,6 +370,7 @@
 "Assets/Brave.cs"
 "Assets/CamaraManager.cs"
 "Assets/CharacterController.cs"
+"Assets/Rope.cs"
 "Assets/Simple 2D Platformer BE2/ReadMe/Scripts/ReadmeBE2.cs"
 -langversion:9.0
 
