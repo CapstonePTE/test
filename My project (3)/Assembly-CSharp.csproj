@@ -56,11 +56,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CharacterController.cs" />
+    <Compile Include="Assets\Script\Light.cs" />
+    <Compile Include="Assets\Script\CharacterController.cs" />
+    <Compile Include="Assets\Script\Door.cs" />
     <Compile Include="Assets\Simple 2D Platformer BE2\ReadMe\Scripts\ReadmeBE2.cs" />
-    <Compile Include="Assets\Brave.cs" />
-    <Compile Include="Assets\CamaraManager.cs" />
-    <Compile Include="Assets\Rope.cs" />
+    <Compile Include="Assets\Script\Brave.cs" />
+    <Compile Include="Assets\Script\Trigger.cs" />
+    <Compile Include="Assets\Script\CamaraManager.cs" />
+    <Compile Include="Assets\Script\Rope.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
