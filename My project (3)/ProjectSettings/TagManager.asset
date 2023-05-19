@@ -9,6 +9,7 @@ TagManager:
   - Rope
   - Trigger
   - Box
+  - Switch
   layers:
   - Default
   - TransparentFX

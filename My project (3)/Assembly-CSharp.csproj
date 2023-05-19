@@ -59,8 +59,10 @@
     <Compile Include="Assets\Script\Box.cs" />
     <Compile Include="Assets\Script\Light.cs" />
     <Compile Include="Assets\Script\CharacterController.cs" />
+    <Compile Include="Assets\Script\RotateBar.cs" />
     <Compile Include="Assets\Script\Door.cs" />
     <Compile Include="Assets\Script\PlatTrigger.cs" />
+    <Compile Include="Assets\Script\Switch.cs" />
     <Compile Include="Assets\Simple 2D Platformer BE2\ReadMe\Scripts\ReadmeBE2.cs" />
     <Compile Include="Assets\Script\Brave.cs" />
     <Compile Include="Assets\Script\Light2.cs" />

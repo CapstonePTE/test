@@ -376,6 +376,8 @@
 "Assets/Script/Light2.cs"
 "Assets/Script/PlatTrigger.cs"
 "Assets/Script/Rope.cs"
+"Assets/Script/RotateBar.cs"
+"Assets/Script/Switch.cs"
 "Assets/Script/Trigger.cs"
 "Assets/Simple 2D Platformer BE2/ReadMe/Scripts/ReadmeBE2.cs"
 -langversion:9.0
