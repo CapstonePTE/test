@@ -25,7 +25,7 @@ public class Light : MonoBehaviour
         {
             animator.SetBool("isLight", true);
             Debug.Log("Light on");
-            Door.isDoor = true;
+            Door.isDoor1 = true;
         }
     }
 }

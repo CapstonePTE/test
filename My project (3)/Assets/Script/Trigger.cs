@@ -6,6 +6,8 @@ public class Trigger : MonoBehaviour
 {
     Animator animator;
     Rigidbody2D rigid;
+    public static bool isTrigger;
+    bool isPlayer = false;
 
     void Awake()
     {
@@ -15,11 +17,10 @@ public class Trigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player")) //Æ®¸®°Å¶û ´êÀº°æ¿ì
         {
-            animator.SetBool("isTrigger", true);
-            Light.isTurnon = true;
-            Debug.Log("Trigger on");
+            isPlayer = true;
+            Debug.Log("collision trigger");
         }
     }
 
@@ -32,6 +33,16 @@ public class Trigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isPlayer && Input.GetKeyDown(KeyCode.V)) 
+        {
+            isTrigger = true;
+        }
+
+        if (isTrigger == true)
+        {
+            animator.SetBool("isTrigger", true);
+            Light.isTurnon = true;
+            Debug.Log("Trigger on");
+        }
     }
 }

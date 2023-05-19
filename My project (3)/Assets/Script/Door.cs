@@ -6,7 +6,8 @@ public class Door : MonoBehaviour
 {
 
     Animator animator;
-    public static bool isDoor = false;
+    public static bool isDoor1 = false;
+    public static bool isDoor2 = false;
 
     void Awake()
     {
@@ -22,7 +23,7 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDoor == true)
+        if (isDoor1 == true && isDoor2 == true)
         {
             animator.SetBool("isOpen", true);
             Debug.Log("Door open");
