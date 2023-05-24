@@ -6840,7 +6840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageIndex: 0
   health: 4
-  player: {fileID: 0}
+  player: {fileID: 260979893}
   stages:
   - {fileID: 703870216}
   - {fileID: 1723283300}
