@@ -372,6 +372,7 @@
 "Assets/Script/CamaraManager.cs"
 "Assets/Script/CharacterController.cs"
 "Assets/Script/Door.cs"
+"Assets/Script/GameManager.cs"
 "Assets/Script/Light.cs"
 "Assets/Script/Light2.cs"
 "Assets/Script/PlatTrigger.cs"

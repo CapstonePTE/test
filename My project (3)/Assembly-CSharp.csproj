@@ -65,6 +65,7 @@
     <Compile Include="Assets\Script\Light2.cs" />
     <Compile Include="Assets\Script\Trigger.cs" />
     <Compile Include="Assets\Script\CamaraManager.cs" />
+    <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\Rope.cs" />
   </ItemGroup>
   <ItemGroup>

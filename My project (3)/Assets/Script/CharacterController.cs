@@ -15,10 +15,13 @@ public class CharacterController : MonoBehaviour
     public static bool isRope = false; //로프에 닿아있는지 확인
     public static bool isBrave = false; //용기의 보석을 먹었는지 체크
     Animator animator; //애니메이터 조작을 위한 변수
+    public GameManager gameManager; //게임매니저 스크립트
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // 캐릭터의 Rigidbody2D 컴포넌트 가져오기
+        Debug.Log(transform.position);
+
     }
     void Awake()
     {
@@ -186,11 +189,23 @@ public class CharacterController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
+        {
             GetComponent<CapsuleCollider2D>().isTrigger = true;
+        }
+        else if (collision.gameObject.tag == "Finish") //깃발에 닿은 경우
+        {
+            //다음 스테이지로 넘어감
+            gameManager.Nextstage();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         GetComponent<CapsuleCollider2D>().isTrigger = false;
+    }
+    public void VelocityZero()
+    {
+        transform.position = new Vector3(0, 0, 0);
+        rigid.velocity = Vector2.zero;
     }
 }
