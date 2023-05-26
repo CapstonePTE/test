@@ -22,7 +22,7 @@ public class Rope0_1 : MonoBehaviour
 
     }
 
-    Vector2 destination = new Vector2(50, 8);
+    Vector2 destination = new Vector2(45, 6);
 
     // Start is called before the first frame update
     void Start()

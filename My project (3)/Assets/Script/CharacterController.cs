@@ -179,7 +179,7 @@ public class CharacterController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground")) // 캐릭터가 땅에 닿은 경우
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box")) // 캐릭터가 땅에 닿은 경우
         {
             isGrounded = true; // 땅에 있음으로 상태 변경
             jumpCount = 2;

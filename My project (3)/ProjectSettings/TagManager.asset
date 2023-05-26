@@ -10,6 +10,9 @@ TagManager:
   - Trigger
   - Box
   - Switch
+  - Water
+  - Water2
+  - Stone
   layers:
   - Default
   - TransparentFX
