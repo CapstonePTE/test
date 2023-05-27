@@ -94,6 +94,8 @@ public class CharacterController : MonoBehaviour
                 {
                     rigid.velocity = new Vector2(rigid.velocity.x, maxUp); //최대 상승 속도
                     Debug.Log("up");
+                    transform.position = new Vector3(GameObject.FindGameObjectWithTag("Rope").transform.position.x, transform.position.y, transform.position.z);
+                    isGrounded = true;
                 }
             }
 
@@ -113,6 +115,8 @@ public class CharacterController : MonoBehaviour
                 {
                     rigid.velocity = new Vector2(rigid.velocity.x, maxUp * (-1)); //최대 하강 속도
                     Debug.Log("down");
+                    transform.position = new Vector3(GameObject.FindGameObjectWithTag("Rope").transform.position.x, transform.position.y, transform.position.z);
+                    isGrounded = true;
                 }
             }
 
