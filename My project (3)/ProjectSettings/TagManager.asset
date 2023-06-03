@@ -13,6 +13,7 @@ TagManager:
   - Water
   - Water2
   - Stone
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Player
+  - Trap
   - 
   - 
   - 

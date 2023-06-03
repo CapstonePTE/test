@@ -14,9 +14,9 @@ public class RotateBar2_1 : MonoBehaviour
     void Update()
     {
         if (isRotate == false)
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
 
         else if (isRotate == true)
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
     }
 }

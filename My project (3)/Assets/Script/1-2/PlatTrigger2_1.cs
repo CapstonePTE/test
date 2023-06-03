@@ -16,6 +16,11 @@ public class PlatTrigger2_1 : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +34,13 @@ public class PlatTrigger2_1 : MonoBehaviour
         {
             isPlatTrigger = true;
             RotateBar2_1.isRotate = true;
+            animator.SetBool("isPlatTrigger", true);
         }
         else if(isBox == false)
         {
             isPlatTrigger = false;
             RotateBar2_1.isRotate = false;
+            animator.SetBool("isPlatTrigger", false);
         } 
     }
 }

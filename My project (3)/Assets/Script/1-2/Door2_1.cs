@@ -24,15 +24,8 @@ public class Door2_1 : MonoBehaviour
     {
         if (isDoor == true)
         {
-            animator.SetBool("isOpen", true);
+            Destroy(gameObject);
             Debug.Log("Door open");
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        }
-        else if (isDoor == false)
-        {
-            animator.SetBool("isOpen", false);
-            Debug.Log("Door close");
-            gameObject.GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 }

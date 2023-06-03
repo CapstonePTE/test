@@ -96,6 +96,11 @@
     <Compile Include="Assets\Script\1-1\Switch1_1.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Mage Hero 1\HD\FX\tornato\Read Me.txt" />
+    <None Include="Assets\Mage Hero 1\Original\FX\tornato\Read Me.txt" />
+    <None Include="Assets\Mage Hero 1\Read Me.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.24f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

@@ -9,7 +9,7 @@ public class PlatTrigger1_1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Box") || collision.gameObject.CompareTag("Player")) //Æ®¸®°Å¶û ´êÀº°æ¿ì
+        if (collision.gameObject.CompareTag("Box")) //Æ®¸®°Å¶û ´êÀº°æ¿ì
         {
             isBox = true;
             Debug.Log("collision PlatTrigger");
@@ -20,6 +20,11 @@ public class PlatTrigger1_1 : MonoBehaviour
     {
         isBox = false;
         Debug.Log("Eixt PlatTrigger");
+    }
+
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -43,11 +48,13 @@ public class PlatTrigger1_1 : MonoBehaviour
         if (isPlatTrigger == true)
         {
             Light1_2.isTurnon = true;
+            animator.SetBool("isPlatTrigger", true);
             Debug.Log("PlatTrigger on");
         }
         else if (isPlatTrigger == false)
         {
             Light1_2.isTurnon = false;
+            animator.SetBool("isPlatTrigger", false);
             Debug.Log("PlatTrigger off");
         }
     }

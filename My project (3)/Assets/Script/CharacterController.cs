@@ -16,6 +16,7 @@ public class CharacterController : MonoBehaviour
     public static bool isBrave = false; //용기의 보석을 먹었는지 체크
     Animator animator; //애니메이터 조작을 위한 변수
     public GameManager gameManager; //게임매니저 스크립트
+    bool isDamaged;
 
     private void Start()
     {
@@ -88,7 +89,7 @@ public class CharacterController : MonoBehaviour
             {
                 rb.gravityScale = 0; // 중력 제거
                 GetComponent<CapsuleCollider2D>().isTrigger = true;
-
+                animator.SetBool("isClimb", true);
                 rb.AddForce(Vector2.up * v, ForceMode2D.Impulse);
                 if (rigid.velocity.y > maxUp)
                 {
@@ -109,7 +110,7 @@ public class CharacterController : MonoBehaviour
             {
                 rb.gravityScale = 0; // 중력 제거
                 GetComponent<CapsuleCollider2D>().isTrigger = true;
-
+                animator.SetBool("isClimb", true);
                 rb.AddForce(Vector2.up * v, ForceMode2D.Impulse);
                 if (rigid.velocity.y < maxUp * (-1))
                 {
@@ -130,6 +131,7 @@ public class CharacterController : MonoBehaviour
         else if (isRope == false)
         {
             rb.gravityScale = 1; //중력 복구}
+            animator.SetBool("isClimb", false);
         }
     }
 
@@ -144,37 +146,50 @@ public class CharacterController : MonoBehaviour
         rb.AddForce(movement * speed); // Rigidbody2D에 힘을 가해 캐릭터 이동시키기
 
         float h = Input.GetAxisRaw("Horizontal");
-        
 
-        if (h == 0) // 방향키를 떼면
-        {
-            rigid.velocity = new Vector2(0, rigid.velocity.y); // 가해진 수평 방향 힘 제거
-            animator.SetBool("isMove", false);
-        }
-        else // 방향키를 누르고 있는 동안
-        {
-            animator.SetBool("isMove", true);
-            rb.AddForce(Vector2.right * h, ForceMode2D.Impulse);
-            if (rigid.velocity.x > maxSpeed)//오른쪽
-            {
-                rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
-                Debug.Log("Right");
-            }
-            else if (rigid.velocity.x < maxSpeed * (-1))//왼쪽
-            {
-                rigid.velocity = new Vector2(maxSpeed * (-1), rigid.velocity.y);
-                Debug.Log("Left");
-            }
 
-            if (rigid.velocity.x > 0.1) //방향전환
+
+
+        if (isDamaged == true)
+        {
+            
+        }
+
+        else if (isDamaged == false)
+        {
+            if (h == 0) // 방향키를 떼면
             {
-                GetComponent<SpriteRenderer>().flipX = false;
+                rigid.velocity = new Vector2(0, rigid.velocity.y); // 가해진 수평 방향 힘 제거
+                animator.SetBool("isMove", false);
+
             }
-            else if (rigid.velocity.x < 0.1 * (-1))
+            else // 방향키를 누르고 있는 동안
             {
-                GetComponent<SpriteRenderer>().flipX = true;
+                animator.SetBool("isMove", true);
+                rb.AddForce(Vector2.right * h, ForceMode2D.Impulse);
+                if (rigid.velocity.x > maxSpeed)//오른쪽
+                {
+                    rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
+                    Debug.Log("Right");
+                }
+                else if (rigid.velocity.x < maxSpeed * (-1))//왼쪽
+                {
+                    rigid.velocity = new Vector2(maxSpeed * (-1), rigid.velocity.y);
+                    Debug.Log("Left");
+                }
+
+                if (rigid.velocity.x > 0.1) //방향전환
+                {
+                    GetComponent<SpriteRenderer>().flipX = false;
+                }
+                else if (rigid.velocity.x < 0.1 * (-1))
+                {
+                    GetComponent<SpriteRenderer>().flipX = true;
+                }
             }
         }
+
+       
 
 
     }
@@ -187,6 +202,11 @@ public class CharacterController : MonoBehaviour
         {
             isGrounded = true; // 땅에 있음으로 상태 변경
             jumpCount = 2;
+        }
+
+        if (collision.gameObject.CompareTag("Trap"))
+        {
+            OnDamaged(collision.transform.position);
         }
     }
 
@@ -211,5 +231,35 @@ public class CharacterController : MonoBehaviour
     {
         transform.position = new Vector3(0, 0, 0);
         rigid.velocity = Vector2.zero;
+    }
+
+    void OnDamaged(Vector2 targetPos) //방향키 입력 없을시 속도를 0으로 만드는 기능 때문에 뒤로 튕겨나가기 구현을 위해 isDamaged 추가
+    {
+        isDamaged = true;
+        //gameObject는 자기자신을 의미
+        //충돌시 플레이어의 레이어가 PlayerDamaged 즉,11번 레이어로 변해야 
+        gameObject.layer = 11;
+        SpriteRenderer.color = new Color(1, 1, 1, 0.4f);
+        //한대 맞으면 튕겨나가게
+        int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
+        //오른쪽으로 맞으면 오른쪽으로 튕겨나가고 왼쪽으로 맞으면 왼쪽으로 튕겨나가고
+        rigid.velocity = new Vector2(0, rigid.velocity.y);
+        rigid.AddForce(new Vector2(dirc, 1) * 5, ForceMode2D.Impulse);
+        animator.SetBool("isHurt", true);
+        Invoke("OffDamaged2", 0.35f);
+        Invoke("OffDamaged", 1.5f); 
+    }
+
+    void OffDamaged()
+    {
+        gameObject.layer = 10;
+        SpriteRenderer.color = new Color(1, 1, 1, 1);
+        
+    }
+
+    void OffDamaged2()
+    {
+        isDamaged = false;
+        animator.SetBool("isHurt", false);
     }
 }
