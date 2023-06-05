@@ -203,10 +203,23 @@ public class CharacterController : MonoBehaviour
             isGrounded = true; // 땅에 있음으로 상태 변경
             jumpCount = 2;
         }
-
-        if (collision.gameObject.CompareTag("Trap"))
+        
+        //적 또는 함정에 닿았을 때
+        else if (collision.gameObject.tag == "Enemy")
         {
             OnDamaged(collision.transform.position);
+            gameManager.HealthDown(); //대미지를 1 입음
+            Debug.Log("대미지를 입었습니다");
+        }
+
+        if (collision.gameObject.tag == "FallingSpace")
+        {
+            gameManager.HealthDown(); //대미지를 1 입음
+            Debug.Log("맵 밖으로 나가 대미지를 입었습니다.");
+
+            if (gameManager.health >= 1)
+                transform.position = new Vector3(0, 0, -1); // 캐릭터가 해당 스테이지 시작위치로 이동
+
         }
     }
 

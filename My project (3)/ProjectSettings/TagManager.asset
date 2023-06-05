@@ -14,6 +14,8 @@ TagManager:
   - Water2
   - Stone
   - Trap
+  - Enemy
+  - FallingSpace
   layers:
   - Default
   - TransparentFX
@@ -24,9 +26,9 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - FallingSpace
   - Player
-  - Trap
+  - Enemy
   - 
   - 
   - 
