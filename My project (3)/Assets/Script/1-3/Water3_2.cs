@@ -24,7 +24,7 @@ public class Water3_2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Stone"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y + 1, transform.localScale.z);
             Count++;
