@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public int health;
     public int maxhp = 4;
     public CharacterController player;
+    public DashCamera SecondCamera;
     public GameObject[] stages;
 
     public GameObject[] UIhealth;
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
         RestartBtn.SetActive(false);
         HealthRecover();
         Time.timeScale = 1.0f;
-
+        DashCamera.isReset = true;
     }
 
     //체력회복(재시작버튼 눌렀을때)
@@ -65,7 +66,6 @@ public class GameManager : MonoBehaviour
             health--;
             UIhealth[health].SetActive(false);
             Debug.Log("체력이 1 감소했습니다.");
-
         }
 
         //체력이 0이 되어버린 경우
@@ -81,6 +81,16 @@ public class GameManager : MonoBehaviour
         }
 
 
+    }
+
+    public void OnKill()
+    {
+        health = 0;
+        UIhealth[health].SetActive(false);
+        Debug.Log("게임오버");
+        Time.timeScale = 0;
+        //재시작 버튼
+        RestartBtn.SetActive(true);
     }
 
     public void PlayerReposition()

@@ -16,6 +16,10 @@ TagManager:
   - Trap
   - Enemy
   - FallingSpace
+  - LTrigger
+  - LSp
+  - 2BossCamera
+  - DropRope
   layers:
   - Default
   - TransparentFX

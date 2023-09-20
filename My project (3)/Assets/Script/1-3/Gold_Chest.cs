@@ -9,6 +9,7 @@ public class Gold_Chest : MonoBehaviour
     public static bool isChest;
     bool isPlayer = false;
     public GameObject Brave;
+    bool isOpen = false;
 
     void Awake()
     {
@@ -43,13 +44,17 @@ public class Gold_Chest : MonoBehaviour
             isChest = true;
         }
 
-        if (isChest == true)
+        if (isOpen == false) 
         {
-            animator.SetBool("IsOpened", true);
-            Debug.Log("Chest open");
-            DropItem();
+            if (isChest == true)
+            {
+                animator.SetBool("IsOpened", true);
+                Debug.Log("Chest open");
+                DropItem();
+                isOpen = true;
+            }
         }
-
+        
         void DropItem()
         {
             Instantiate(Brave);

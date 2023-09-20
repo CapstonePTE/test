@@ -406,6 +406,15 @@
 "Assets/Cainos/Third Party/Lucid Editor/Runtime/Attributes/ValidateInputAttribute.cs"
 "Assets/Cainos/Third Party/Lucid Editor/Runtime/Enum.cs"
 "Assets/Cainos/Third Party/Lucid Editor/Runtime/PropertyGroupAttribute.cs"
+"Assets/Dash.cs"
+"Assets/DashCamera.cs"
+"Assets/DashWall.cs"
+"Assets/DropRope.cs"
+"Assets/DropRope_1.cs"
+"Assets/Lion.cs"
+"Assets/LionSpawner.cs"
+"Assets/LTrigger.cs"
+"Assets/PlayerCount.cs"
 "Assets/Script/1-1/Door1_1.cs"
 "Assets/Script/1-1/Light1_1.cs"
 "Assets/Script/1-1/Light1_2.cs"
@@ -445,6 +454,7 @@
 "Assets/Script/Tuto/Rope0_1.cs"
 "Assets/Script/Tuto/Switch0_1.cs"
 "Assets/Simple 2D Platformer BE2/ReadMe/Scripts/ReadmeBE2.cs"
+"Assets/UpPipe.cs"
 -langversion:9.0
 
 /deterministic

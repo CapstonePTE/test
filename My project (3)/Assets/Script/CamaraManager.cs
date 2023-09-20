@@ -27,7 +27,7 @@ public class CamaraManager : MonoBehaviour
         if (target.gameObject != null)
         {
             // this는 카메라를 의미 (z값은 카메라값을 그대로 유지)
-            targetPosition.Set(target.transform.position.x, target.transform.position.y + 3, transform.position.z);
+            targetPosition.Set(target.transform.position.x, target.transform.position.y + 2, transform.position.z);
 
             // vectorA -> B까지 T의 속도로 이동
             transform.position = Vector3.Lerp(transform.position, targetPosition, moveSpeed * Time.deltaTime * 2f);

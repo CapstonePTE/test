@@ -5,6 +5,10 @@ public class CharacterController : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
     public float speed = 5.0f; // 캐릭터 이동 속도
     public float jumpForce = 7.0f; // 캐릭터의 점프 힘
+    public float dashSpeed;
+    public float defaultTime;
+    public static float dashTime;
+    public static bool isDashStart; //대쉬 시작판별용
     private int jumpCount;
     public float maxSpeed;
     public float maxJump; //점프 최대 가속도 설정
@@ -14,6 +18,7 @@ public class CharacterController : MonoBehaviour
     private bool isGrounded; // 캐릭터가 땅에 있는지 여부
     public static bool isRope = false; //로프에 닿아있는지 확인
     public static bool isBrave = false; //용기의 보석을 먹었는지 체크
+    public static bool isDash = false; //대쉬 기능 체크
     Animator animator; //애니메이터 조작을 위한 변수
     public GameManager gameManager; //게임매니저 스크립트
     bool isDamaged;
@@ -33,6 +38,15 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
+        if (DropRope.isPlayer == true) // 떨어지는 밧줄과 위치 동기화
+        {
+            if (DropRope.DropCount <= 0.3)
+            {
+                Vector2 target = new Vector2(transform.position.x, transform.position.y - 0.1f);
+                transform.position = Vector2.MoveTowards(transform.position, target, DropRope.speed * Time.deltaTime);
+            }
+        }
+
         if (isBrave == true) // 용기의 보석 획득시
         {
             if (Input.GetKeyDown(KeyCode.Z)) // z 키를 누르고 땅에 있는 경우에만 점프하기
@@ -87,6 +101,7 @@ public class CharacterController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.UpArrow)) // 로프에 닿아았을때
             {
+                //DropRope.isPlayer = true;
                 rb.gravityScale = 0; // 중력 제거
                 GetComponent<CapsuleCollider2D>().isTrigger = true;
                 animator.SetBool("isClimb", true);
@@ -133,6 +148,32 @@ public class CharacterController : MonoBehaviour
             rb.gravityScale = 1; //중력 복구}
             animator.SetBool("isClimb", false);
         }
+
+        if (isDash == true)
+        {
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                isDashStart = true;
+                Debug.Log("대쉬");
+            }
+
+            if (dashTime <= 0)
+            {
+                if (isDashStart == true)
+                    dashTime = defaultTime;
+                maxSpeed = 6;
+                animator.SetBool("isDash", false);
+            }
+            else
+            {
+                dashTime -= Time.deltaTime;
+                maxSpeed += dashSpeed;
+                speed = dashSpeed;
+                animator.SetBool("isDash", true);
+            }
+            isDashStart = false;
+        }
+
     }
 
         
@@ -189,8 +230,8 @@ public class CharacterController : MonoBehaviour
             }
         }
 
-       
 
+        
 
     }
 
@@ -221,6 +262,16 @@ public class CharacterController : MonoBehaviour
                 transform.position = new Vector3(0, 0, -1); // 캐릭터가 해당 스테이지 시작위치로 이동
 
         }
+
+        if (collision.gameObject.tag == "2BossCamera")
+        {
+            gameManager.OnKill(); //대미지를 1 입음
+            Debug.Log("즉사");
+
+            if (gameManager.health >= 1)
+                transform.position = new Vector3(0, 0, -1); // 캐릭터가 해당 스테이지 시작위치로 이동
+
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -234,6 +285,12 @@ public class CharacterController : MonoBehaviour
             //다음 스테이지로 넘어감
             gameManager.Nextstage();
         }
+        else if (collision.gameObject.tag == "DropRope") //깃발에 닿은 경우
+        {
+            //다음 스테이지로 넘어감
+            DropRope.isPlayer = true;
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

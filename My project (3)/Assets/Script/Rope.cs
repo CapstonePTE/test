@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Rope : MonoBehaviour
 {
+    
+
 
     private void OnTriggerEnter2D(Collider2D collision) // 로프에 닿을때
     {
@@ -11,6 +13,7 @@ public class Rope : MonoBehaviour
         {
             CharacterController.isRope = true;
             Debug.Log("rope on");
+
         }
     }
 
