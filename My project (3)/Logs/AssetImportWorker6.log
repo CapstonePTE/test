@@ -1,0 +1,391 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.24f1 (cf10dcf7010d) revision 13570268'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'ko' Physical Memory: 32686 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.24f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker6
+-projectPath
+C:/Users/home/Desktop/asdf/test/test/My project (3)
+-logFile
+Logs/AssetImportWorker6.log
+-srvPort
+3599
+Successfully changed project path to: C:/Users/home/Desktop/asdf/test/test/My project (3)
+C:/Users/home/Desktop/asdf/test/test/My project (3)
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [21972] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 2317941098 [EditorId] 2317941098 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-S6HKOBK) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [21972] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 2317941098 [EditorId] 2317941098 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-S6HKOBK) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 92.58 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.24f1 (cf10dcf7010d)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.24f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/home/Desktop/asdf/test/test/My project (3)/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 SUPER (ID=0x1e84)
+    Vendor:   NVIDIA
+    VRAM:     8003 MB
+    Driver:   31.0.15.3742
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.24f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.24f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.24f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56204
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003870 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 90.08 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.557 seconds
+Domain Reload Profiling:
+	ReloadAssembly (558ms)
+		BeginReloadAssembly (73ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (403ms)
+			LoadAssemblies (71ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (91ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (245ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (90ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (106ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006029 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\home\Desktop\asdf\test\test\My project (3)\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\home\Desktop\asdf\test\test\My project (3)\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 96.04 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.993 seconds
+Domain Reload Profiling:
+	ReloadAssembly (993ms)
+		BeginReloadAssembly (102ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (798ms)
+			LoadAssemblies (77ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (210ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (415ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (96ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (202ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3975 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (0.8 MB). Loaded Objects now: 4427.
+Memory consumption went from 159.0 MB to 158.2 MB.
+Total: 2.989900 ms (FindLiveObjects: 0.272600 ms CreateObjectMapping: 0.261300 ms MarkObjects: 1.983100 ms  DeleteObjects: 0.472200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 776352.102387 seconds.
+  path: Assets/Game2DWaterKit/Demo/Simple Water/Prefabs/Rocks/Rock_v1.prefab
+  artifactKey: Guid(6bdabffa187207947aa423dc495774e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Simple Water/Prefabs/Rocks/Rock_v1.prefab using Guid(6bdabffa187207947aa423dc495774e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67f1a9e72166d153fa6dc50ddbfcbd67') in 0.086686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.168855 seconds.
+  path: Assets/Game2DWaterKit/Demo/Simple Water/Prefabs/Vegetations/Vegetation_v1.prefab
+  artifactKey: Guid(0e1d714fdc2c46d4b8bd067d59761474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Simple Water/Prefabs/Vegetations/Vegetation_v1.prefab using Guid(0e1d714fdc2c46d4b8bd067d59761474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f832e3d472cb4db04cb0bcf5819ce4fc') in 0.011777 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.642548 seconds.
+  path: Assets/Game2DWaterKit/Demo/Simple Water/Sprites/Chest_v0.png
+  artifactKey: Guid(3cd9962b200ffe04e8f96c0edb95ea54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Simple Water/Sprites/Chest_v0.png using Guid(3cd9962b200ffe04e8f96c0edb95ea54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bec098b8cd364a610584959c386391b') in 0.030862 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Game2DWaterKit/Demo/Simple Water/Sprites/Diamond_v2.png
+  artifactKey: Guid(4e6dd69ca6d9cf54fa99d0b51a6e535c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Simple Water/Sprites/Diamond_v2.png using Guid(4e6dd69ca6d9cf54fa99d0b51a6e535c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afbff7fbdda0e6bc338db9353ccc1ab0') in 0.015143 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Game2DWaterKit/Demo/Simple Water/Sprites/Vegetation_v2.png
+  artifactKey: Guid(f7332540e853a7a47b74642b5b545310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Simple Water/Sprites/Vegetation_v2.png using Guid(f7332540e853a7a47b74642b5b545310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef0bd3231e805ae4023674963677fc28') in 0.017743 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Game2DWaterKit/Demo/Simple Water/Sprites/Rock_v0.png
+  artifactKey: Guid(6f22bc46b3cf1194e86a43011f4951fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Simple Water/Sprites/Rock_v0.png using Guid(6f22bc46b3cf1194e86a43011f4951fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eb61da0087b81bae693194c391fe00c') in 0.015479 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Game2DWaterKit/Demo/Simple Water/Sprites/Rock_v1.png
+  artifactKey: Guid(92d2000e31688cf489e3c4683fb72e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Simple Water/Sprites/Rock_v1.png using Guid(92d2000e31688cf489e3c4683fb72e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a08355c8b8d5274bc981a23f7aa2742') in 0.014006 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Game2DWaterKit/Demo/Simple Water/Sprites/PlatformAboveWater_v0.png
+  artifactKey: Guid(a053600eb5646274680ef031203df60b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Simple Water/Sprites/PlatformAboveWater_v0.png using Guid(a053600eb5646274680ef031203df60b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7425bce2e17afb71813de1e454b640e5') in 0.034060 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Game2DWaterKit/Demo/Simple Water/Sprites/Potion_v4.png
+  artifactKey: Guid(99cba111c4349d74ab92b8753c8a7650) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Simple Water/Sprites/Potion_v4.png using Guid(99cba111c4349d74ab92b8753c8a7650) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71927395ea83858d16fe26d3a0f18771') in 0.013066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.302093 seconds.
+  path: Assets/Game2DWaterKit/Demo/Simple Water/Prefabs/Water/Day/Game2D Water Day_noiseTexture.asset
+  artifactKey: Guid(8352fe382042e69448062616a20d9e11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Simple Water/Prefabs/Water/Day/Game2D Water Day_noiseTexture.asset using Guid(8352fe382042e69448062616a20d9e11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af24a4eb575de509ce9580180ddd275f') in 0.014459 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.584790 seconds.
+  path: Assets/Game2DWaterKit/Demo/Simple Water/Prefabs/Water/Night/Game2D Water Night_noiseTexture.asset
+  artifactKey: Guid(9b52eb7dc5c34bc40a3bee4df506ea08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Simple Water/Prefabs/Water/Night/Game2D Water Night_noiseTexture.asset using Guid(9b52eb7dc5c34bc40a3bee4df506ea08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cdcc7bf7bdfb622d532f9b171ae2ba5') in 0.011668 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 47.114363 seconds.
+  path: Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/Backgrounds/Background.png
+  artifactKey: Guid(184d9e8f361a8f248a430110053deac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/Backgrounds/Background.png using Guid(184d9e8f361a8f248a430110053deac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74e20c7a99215d35d54d4a0f893eceeb') in 0.174686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.759822 seconds.
+  path: Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Prefabs/Lava-2/Lava-2 [Water].prefab
+  artifactKey: Guid(5109697162d7fdc4fb1b4f7ac9553929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Prefabs/Lava-2/Lava-2 [Water].prefab using Guid(5109697162d7fdc4fb1b4f7ac9553929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53b28a24168946064857d151c35ff509') in 0.011248 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Prefabs/Lava-2/Lava-2 [Water]_noiseTexture.asset
+  artifactKey: Guid(bff75eba06be5994fb235fec581f438a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Prefabs/Lava-2/Lava-2 [Water]_noiseTexture.asset using Guid(bff75eba06be5994fb235fec581f438a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36f8350a85046d6ee4c8664fbefb0183') in 0.018052 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.841219 seconds.
+  path: Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Prefabs/Lava-3/Lava-3 [Waterfall].prefab
+  artifactKey: Guid(a91e8f99b2eabb846a19ad1b889b64a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Prefabs/Lava-3/Lava-3 [Waterfall].prefab using Guid(a91e8f99b2eabb846a19ad1b889b64a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb636ee37a11115c04a21281145d2347') in 0.008313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Prefabs/Lava-3/Lava-3 [Waterfall]_noiseTexture.asset
+  artifactKey: Guid(0ffcdfa891d8f2346af4089d2f62fefd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Prefabs/Lava-3/Lava-3 [Waterfall]_noiseTexture.asset using Guid(0ffcdfa891d8f2346af4089d2f62fefd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3720a185fbf56b794dbfa3713ec4f1d') in 0.010519 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.023262 seconds.
+  path: Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Prefabs/Lava-1/Lava-1 [Water].prefab
+  artifactKey: Guid(4fd0567732da2f54c87c77f988708062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Prefabs/Lava-1/Lava-1 [Water].prefab using Guid(4fd0567732da2f54c87c77f988708062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3387959dba03cd1257c8211216921aca') in 0.007064 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Prefabs/Lava-1/Lava-1 [Water]_noiseTexture.asset
+  artifactKey: Guid(122b4285826eb354398c46d188283bb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Prefabs/Lava-1/Lava-1 [Water]_noiseTexture.asset using Guid(122b4285826eb354398c46d188283bb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b0b71dbcd29e4d3c9ebf1696afc10f2') in 0.010882 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.305060 seconds.
+  path: Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Sprites/Ground-2.png
+  artifactKey: Guid(bad59f51127ea1845bb28fda75d43161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Sprites/Ground-2.png using Guid(bad59f51127ea1845bb28fda75d43161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aeaa7801ded61c4cde3a363369107e0') in 0.047451 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Sprites/Lava.png
+  artifactKey: Guid(9e8f74924898886498d55c5aa6147409) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Sprites/Lava.png using Guid(9e8f74924898886498d55c5aa6147409) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '088828cca471d5860b7790ac6e61cc45') in 0.024323 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Sprites/Lava [Waterfall].png
+  artifactKey: Guid(0870fd6b9728d3b4a9b1ddd1fed979cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Lava [Mesh Mask]/Sprites/Lava [Waterfall].png using Guid(0870fd6b9728d3b4a9b1ddd1fed979cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79168a2eb1a9c9bef26b7805cd3d3206') in 0.072757 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006364 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\home\Desktop\asdf\test\test\My project (3)\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\home\Desktop\asdf\test\test\My project (3)\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.49 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.888 seconds
+Domain Reload Profiling:
+	ReloadAssembly (888ms)
+		BeginReloadAssembly (119ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (685ms)
+			LoadAssemblies (75ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (224ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (300ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (187ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.38 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3957 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (0.7 MB). Loaded Objects now: 4470.
+Memory consumption went from 161.6 MB to 160.9 MB.
+Total: 3.400300 ms (FindLiveObjects: 0.271300 ms CreateObjectMapping: 0.210400 ms MarkObjects: 2.472200 ms  DeleteObjects: 0.445700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 126.894694 seconds.
+  path: Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/FX/Bubble.png
+  artifactKey: Guid(e9f08fdedcdd64d449a60148fb40689e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/FX/Bubble.png using Guid(e9f08fdedcdd64d449a60148fb40689e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '883b5f1c72e36bce025f8f60d3916db1') in 0.053615 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/FX/water.png
+  artifactKey: Guid(0cd27bc0b380b844db188c177cd556a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/FX/water.png using Guid(0cd27bc0b380b844db188c177cd556a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e389f74fcfe66572c5d81dee6ad48f0') in 0.012256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.197048 seconds.
+  path: Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/Platform/breakablePart_1.png
+  artifactKey: Guid(22ab2fe574278264fb4967c326b60e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/Platform/breakablePart_1.png using Guid(22ab2fe574278264fb4967c326b60e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bcc38e2a19a098f5026a814081ee554') in 0.010945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/Platform/mainPart.png
+  artifactKey: Guid(f232a5f0ae1be294a9a796d6cb4cf5c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/Platform/mainPart.png using Guid(f232a5f0ae1be294a9a796d6cb4cf5c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33c772a75f67b2386272720537aa31da') in 0.023841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.607102 seconds.
+  path: Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/Player/eye_lids.png
+  artifactKey: Guid(ecb62bd4e92d3414c8571eb64b8bf362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/Player/eye_lids.png using Guid(ecb62bd4e92d3414c8571eb64b8bf362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1001f0df3affc5cb6fd34c5412ed58ea') in 0.017131 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/Player/eyes.png
+  artifactKey: Guid(86cd39bea3b60d541b49877b9bbed8fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/Player/eyes.png using Guid(86cd39bea3b60d541b49877b9bbed8fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4db2dbfd94f72881b5a02e013aeebb5') in 0.017233 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/Player/mouth.png
+  artifactKey: Guid(9d52a8b74df4e984fbd9f077d48a55f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game2DWaterKit/Demo/Large Water Area/Sprites/Player/mouth.png using Guid(9d52a8b74df4e984fbd9f077d48a55f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3d9e962c1a44cf74aca96e7aef91c63') in 0.021063 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

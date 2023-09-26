@@ -22,6 +22,7 @@ public class CharacterController : MonoBehaviour
     Animator animator; //애니메이터 조작을 위한 변수
     public GameManager gameManager; //게임매니저 스크립트
     bool isDamaged;
+    bool isDropRope = false;
 
     private void Start()
     {
@@ -38,6 +39,13 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
+        if (isDropRope == true)
+        {
+            if (Input.GetKey(KeyCode.UpArrow)) // 로프에 닿아았을때
+            {
+                DropRope.isPlayer = true;
+            }
+        }
         if (DropRope.isPlayer == true) // 떨어지는 밧줄과 위치 동기화
         {
             if (DropRope.DropCount <= 0.3)
@@ -285,10 +293,9 @@ public class CharacterController : MonoBehaviour
             //다음 스테이지로 넘어감
             gameManager.Nextstage();
         }
-        else if (collision.gameObject.tag == "DropRope") //깃발에 닿은 경우
+        else if (collision.gameObject.tag == "DropRope")
         {
-            //다음 스테이지로 넘어감
-            DropRope.isPlayer = true;
+            isDropRope = true;
         }
 
     }
